@@ -1,0 +1,100 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="dialog_transparent_bg_style" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- 横向分割线 -->
+    <style name="line_diliver">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.67dp</item>
+        <item name="android:background">#e3e3e3</item>
+    </style>
+
+    <style name="line_diliver_h">
+        <item name="android:layout_width">0.67dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#e3e3e3</item>
+    </style>
+    <!--<style name="dialog_transparent_bg_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>&lt;!&ndash;边框&ndash;&gt;
+        <item name="android:windowIsFloating">true</item>&lt;!&ndash;是否浮现在activity之上&ndash;&gt;
+        <item name="android:windowIsTranslucent">false</item>&lt;!&ndash;半透明&ndash;&gt;
+        <item name="android:windowNoTitle">true</item>&lt;!&ndash;无标题&ndash;&gt;
+        <item name="android:windowBackground">@android:color/transparent</item>&lt;!&ndash;背景透明&ndash;&gt;
+        <item name="android:backgroundDimEnabled">false</item>&lt;!&ndash;模糊&ndash;&gt;
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>-->
+
+    <style name="text_marquee">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:marqueeRepeatLimit">marquee_forever</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <declare-styleable name="DotProgressView">
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+        <attr name="duration" format="integer" />
+        <attr name="amount" format="integer" />
+        <attr name="animationDirection" format="enum">
+            <enum name="right" value="1" />
+            <enum name="left" value="-1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CircularProgressView">
+        <attr name="cpv_progress" format="float" />
+        <attr name="cpv_maxProgress" format="float" />
+        <attr name="cpv_animDuration" format="integer" />
+        <attr name="cpv_animSwoopDuration" format="integer" />
+        <attr name="cpv_animSyncDuration" format="integer" />
+        <attr name="cpv_color" format="color" />
+        <attr name="cpv_thickness" format="dimension" />
+        <attr name="cpv_indeterminate" format="boolean" />
+        <attr name="cpv_animAutostart" format="boolean" />
+        <attr name="cpv_animSteps" format="integer" />
+        <attr name="cpv_startAngle" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="SpotsProgressView">
+        <attr name="spot_color" format="reference|color" />
+        <attr name="spot_count" format="integer" />
+    </declare-styleable>
+
+    <!--扫描二维码-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/blue_light</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="MatchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MatchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="WrapWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="WrapWrapTv" parent="WrapWrap">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_btn_orange</item>
+        <item name="android:onClick">onClick</item>
+        <item name="android:padding">4dp</item>
+    </style>
+</resources>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/inoculate_desk_mian_rv_bg"
+    android:layout_marginBottom="2dp"
+    android:layout_marginEnd="1dp">
+
+    <TextView
+        android:id="@+id/vaccineTitle"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@drawable/desk_mian_rv_header_bg"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="卡介苗"
+        android:textColor="@color/text_color_7"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/batchNumberTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:text="批次号："
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineTitle" />
+
+    <TextView
+        android:id="@+id/batchNumberText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/batchNumberTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineTitle"
+        app:layout_constraintTop_toTopOf="@+id/batchNumberTitle"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.22"/>
+
+    <TextView
+        android:id="@+id/vaccinePartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="接种部位："
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/batchNumberTitle" />
+
+    <TextView
+        android:id="@+id/vaccinePartText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/vaccinePartTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintHorizontal_bias=".18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/vaccinePartTitle"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.22" />
+
+    <TextView
+        android:id="@+id/validTermTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:text="有效期："
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/batchNumberText"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineTitle" />
+
+    <TextView
+        android:id="@+id/vaccineTermText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/validTermTitle"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineTitle" />
+
+    <TextView
+        android:id="@+id/vaccinePriceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
+        android:text="价格："
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineTitle" />
+
+    <TextView
+        android:id="@+id/vaccinePriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/vaccinePriceTitle"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineTitle" />
+
+    <TextView
+        android:id="@+id/vaccineWayTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="接种途径："
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/vaccinePartText"
+        app:layout_constraintTop_toBottomOf="@+id/validTermTitle" />
+
+    <TextView
+        android:id="@+id/vaccineWayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/text_color_7"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/vaccineWayTitle"
+        app:layout_constraintTop_toBottomOf="@+id/validTermTitle" />
+
+    <TextView
+        android:id="@+id/confirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_main_bottom_selector1"
+        android:paddingLeft="22dp"
+        android:paddingTop="8dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="8dp"
+        android:text="接种"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/cancelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineWayText" />
+
+    <TextView
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_main_rv_selector1"
+        android:paddingLeft="22dp"
+        android:paddingTop="8dp"
+        android:paddingRight="22dp"
+        android:paddingBottom="8dp"
+        android:text="取消"
+        android:visibility="gone"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineWayText" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/inoculateStateIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/inoculated_icon_bg"
+        android:paddingLeft="14dp"
+        android:paddingTop="10dp"
+        android:paddingRight="14dp"
+        android:paddingBottom="10dp"
+        android:text="已接种"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/cancelBtn"
+        app:layout_constraintTop_toBottomOf="@+id/vaccineWayText"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/chargeTypeIv"
+        android:layout_width="104dp"
+        android:layout_height="78dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:rotation="10"/>
+
+</android.support.constraint.ConstraintLayout>

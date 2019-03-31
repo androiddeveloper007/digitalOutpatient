@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/row0Title"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.12"
+            android:background="@color/divider_color">
+
+            <TextView
+                android:id="@+id/wostShowName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="接种大屏"
+                android:textColor="@color/text_color_right"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/row0line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/row0Title"/>
+
+        <TextView
+            android:id="@+id/rowTitle0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="排队编号"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/row0line"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.33" />
+
+        <View
+            android:id="@+id/rowLine0"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.0025"
+            app:layout_constraintStart_toEndOf="@+id/rowTitle0"
+            app:layout_constraintTop_toBottomOf="@+id/row0line" />
+
+        <TextView
+            android:id="@+id/rowTitle1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="姓名"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toEndOf="@+id/rowLine0"
+            app:layout_constraintTop_toBottomOf="@+id/row0line"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.34" />
+
+        <View
+            android:id="@+id/rowLine1"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.0025"
+            app:layout_constraintStart_toEndOf="@+id/rowTitle1"
+            app:layout_constraintTop_toBottomOf="@+id/row0line" />
+
+        <TextView
+            android:id="@+id/rowTitle2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toEndOf="@+id/rowLine1"
+            app:layout_constraintTop_toBottomOf="@+id/row0line"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.33" />
+
+        <View
+            android:id="@+id/row1line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/rowTitle0"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvInoculateWait"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.48"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintTop_toBottomOf="@+id/row1line"
+            android:overScrollMode="never"/>
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#e04745"
+            android:gravity="center"
+            android:text="2018年11月10日"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/rvInoculateWait"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.175" />
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#e04745"
+            android:gravity="center"
+            android:text="上午9：00"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/dateText"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.175" />
+
+        <TextView
+            android:id="@+id/waitPeopleBannerTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            android:gravity="center_vertical"
+            android:paddingStart="30dp"
+            android:text="等待编号："
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/rvInoculateWait"
+            app:layout_constraintStart_toEndOf="@+id/dateText"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.175" />
+
+        <TextView
+            android:id="@+id/waitPeopleBanner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            android:gravity="center_vertical"
+            android:paddingEnd="20dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/rvInoculateWait"
+            app:layout_constraintStart_toEndOf="@+id/waitPeopleBannerTitle"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <TextView
+            android:id="@+id/passedPeopleBannerTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            android:gravity="center_vertical"
+            android:paddingStart="30dp"
+            android:text="过号编号："
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/dateText"
+            app:layout_constraintStart_toEndOf="@+id/timeText"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.175" />
+
+        <TextView
+            android:id="@+id/passedPeopleBanner"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/blue"
+            android:gravity="center_vertical"
+            android:paddingEnd="20dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/dateText"
+            app:layout_constraintStart_toEndOf="@+id/passedPeopleBannerTitle"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/not_surance_yellow"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="温馨提示："
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/timeText"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.825" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

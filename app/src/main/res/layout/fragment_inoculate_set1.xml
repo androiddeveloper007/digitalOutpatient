@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_bg">
+
+        <TextView
+            android:id="@+id/set"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="设置"
+            android:textColor="@color/key_text"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/soundSet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set"
+            android:background="@drawable/set_fragment_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="语音设置"
+            android:textColor="@color/text_color_7"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/screenShowSet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/soundSet"
+            android:background="@drawable/set_fragment_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="屏幕显示设置"
+            android:textColor="@color/text_color_7"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/workstationSet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/screenShowSet"
+            android:background="@drawable/set_fragment_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="工作台设置"
+            android:textColor="@color/text_color_7"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/systemParamSet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/workstationSet"
+            android:background="@drawable/set_fragment_item_selector"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="系统参数"
+            android:textColor="@color/text_color_7"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.24"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lineV"
+            app:layout_constraintTop_toBottomOf="@+id/systemParamSet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btn_main_rv_selector"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/lineV"
+            android:layout_width="0.33dp"
+            android:layout_height="match_parent"
+            android:background="@color/line_color"
+            android:paddingStart="20dp"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/fgTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/set_fragment_item_selector"
+            android:gravity="center"
+            android:text="语音设置"
+            android:textColor="@color/key_text"
+            android:textSize="22sp" />
+
+        <FrameLayout
+            android:id="@+id/setFragmentLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.7"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.88"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/setLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintVertical_bias="0.12"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/soundSetLine"
+            android:layout_width="0dp"
+            android:layout_height="0.33dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintVertical_bias="0.23"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/line_color"
+            android:paddingStart="20dp" />
+
+        <View
+            android:id="@+id/screenShowSetLine"
+            android:layout_width="0dp"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            android:paddingStart="20dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintVertical_bias="0.34"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:id="@+id/workstationSetLine"
+            android:layout_width="0dp"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            android:paddingStart="20dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintVertical_bias="0.45"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <View
+            android:id="@+id/systemParamSetLine"
+            android:layout_width="0dp"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            android:paddingStart="20dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintVertical_bias="0.56"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/row0Title"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.12"
+            android:background="#2b6de7">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="留观屏"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|end"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent=".25" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/row0line"
+            android:layout_width="match_parent"
+            android:layout_height="0.3px"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/row0Title"/>
+
+        <TextView
+            android:id="@+id/rowTitle0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center"
+            android:text="排队号"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/row0line"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/rowTitle1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center"
+            android:text="姓名"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toEndOf="@+id/rowLine0"
+            app:layout_constraintTop_toBottomOf="@+id/row0line"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/rowTitle2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center"
+            android:text="结束时间"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toEndOf="@+id/rowLine1"
+            app:layout_constraintTop_toBottomOf="@+id/row0line"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/rowTitle3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center"
+            android:text="倒计时"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toEndOf="@+id/rowLine2"
+            app:layout_constraintTop_toBottomOf="@+id/row0line"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <View
+            android:id="@+id/row1line"
+            android:layout_width="match_parent"
+            android:layout_height="0.3px"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/rowTitle0"/>
+
+        <!--com.lib.views.AutoVerticalRollRecyclerView-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvStayObserve"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintTop_toBottomOf="@+id/row1line"/>
+
+        <View
+            android:id="@+id/rowLine0"
+            android:layout_width="0.3px"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.0025"
+            app:layout_constraintStart_toEndOf="@+id/rowTitle0"
+            app:layout_constraintTop_toBottomOf="@+id/row0line" />
+
+        <View
+            android:id="@+id/rowLine1"
+            android:layout_width="0.3px"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.0025"
+            app:layout_constraintStart_toEndOf="@+id/rowTitle1"
+            app:layout_constraintTop_toBottomOf="@+id/row0line" />
+
+        <View
+            android:id="@+id/rowLine2"
+            android:layout_width="0.3px"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.0025"
+            app:layout_constraintStart_toEndOf="@+id/rowTitle2"
+            app:layout_constraintTop_toBottomOf="@+id/row0line" />
+
+        <TextView
+            android:id="@+id/tips1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#2b6de7"
+            android:gravity="center_vertical"
+            android:paddingStart="40dp"
+            android:text="温馨提示：接种后发生呕吐、头晕、发热等情况，请及时联系接种医生处理！"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.825"
+            app:layout_constraintBottom_toTopOf="@+id/tips"/>
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center_vertical"
+            android:paddingStart="40dp"
+            android:text="温馨提示：留观结束后，请在留观机上刷接种证条码或排队号确认留观完成"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.825"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3px"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/rowLine2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3px"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/tips1"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

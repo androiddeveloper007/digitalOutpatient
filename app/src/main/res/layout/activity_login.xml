@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/login_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:background="#1f9dc3">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/v_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_percent="0.1"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="欢迎使用金卫信数字化门诊"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v_guideline" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="false"
+            android:background="@drawable/login_border_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginTitle"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.6">
+
+            <LinearLayout
+                android:id="@+id/ipLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/login_edit_border_bg"
+                android:orientation="horizontal"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.08"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.55">
+
+                <TextView
+                    android:id="@+id/urlAndPortTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:focusable="false"
+                    android:text="服务器IP:"
+                    android:textColor="@color/key_text"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/ip_et0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_bg_default"
+                    android:digits="0123456789."
+                    android:focusable="true"
+                    android:text="192.168.199.19"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/portLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:focusable="false"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/login_edit_border_bg"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/ipLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.55">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:focusable="false"
+                    android:text="端   口:"
+                    android:textColor="@color/key_text"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/port_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_bg_default"
+                    android:focusable="true"
+                    android:inputType="phone"
+                    android:maxLength="5"
+                    android:text="8080"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/login_edit_border_bg"
+                android:orientation="horizontal"
+                android:focusable="false"
+                app:layout_constraintTop_toBottomOf="@+id/portLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.19"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.58"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.55">
+
+                <TextView
+                    android:id="@+id/passwordTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:focusable="false"
+                    android:text="密   码:"
+                    android:textColor="@color/key_text"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/pwd_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_bg_default"
+                    android:focusable="true"
+                    android:text="123"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="true"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/btn_login_bg"
+                android:focusable="true"
+                android:onClick="serverLogin"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.93"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.55" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/loginTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:text="@string/login_tip"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.95"/>
+
+        <TextView
+            android:id="@+id/loginVersionTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            app:layout_constraintHorizontal_bias="0.94"/>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

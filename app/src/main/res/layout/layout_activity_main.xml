@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/frame_bg_greyline"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.185"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layout1_title"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/frame_bg_title">
+
+                <!-- 垂直Guideline -->
+                <android.support.constraint.Guideline
+                    android:id="@+id/h_guideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintGuide_percent="0.8"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    android:id="@+id/titleLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="当前排号："
+                    android:textColor="@color/textcolor_black"
+                    android:textSize="22dp"
+                    app:layout_constraintBottom_toTopOf="@+id/h_guideline"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="A001"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    app:layout_constraintBottom_toTopOf="@+id/h_guideline"
+                    app:layout_constraintStart_toEndOf="@id/titleLine" />
+
+                <TextView
+                    android:id="@+id/waitPeopleCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="等候人数：8"
+                    android:textColor="@color/textcolor_black"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toTopOf="@+id/h_guideline"
+                    app:layout_constraintStart_toEndOf="@id/textLine" />
+
+                <TextView
+                    android:id="@+id/finishPeopleCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="完成人数：8"
+                    android:textColor="@color/textcolor_black"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toTopOf="@+id/h_guideline"
+                    app:layout_constraintStart_toEndOf="@id/waitPeopleCount" />
+
+                <TextView
+                    android:id="@+id/passPeopleCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="过号人数：8"
+                    android:textColor="@color/textcolor_black"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toTopOf="@+id/h_guideline"
+                    app:layout_constraintStart_toEndOf="@id/finishPeopleCount" />
+
+                <TextView
+                    android:id="@+id/vaccinateState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="1号接种台"
+                    android:textColor="@color/white"
+                    android:textSize="22dp"
+                    app:layout_constraintBottom_toTopOf="@+id/h_guideline"
+                    app:layout_constraintEnd_toStartOf="@+id/doctorName" />
+
+                <TextView
+                    android:id="@+id/doctorName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:text="王医生"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toTopOf="@+id/h_guideline"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/childNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="儿童姓名"
+                android:textColor="@color/key_text"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.22"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title" />
+
+            <TextView
+                android:id="@+id/childNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/tv_bg_greyline"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="小明"
+                android:textColor="#FFDDDDDD"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toEndOf="@+id/childNameTitle"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title" />
+
+            <TextView
+                android:id="@+id/sexTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="18dp"
+                android:gravity="center_vertical"
+                android:text="性别"
+                android:textColor="@color/key_text"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.22"
+                app:layout_constraintStart_toEndOf="@+id/childNameText"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title" />
+
+            <TextView
+                android:id="@+id/sexText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/tv_bg_greyline"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="男"
+                android:textColor="#FFDDDDDD"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toEndOf="@+id/sexTitle"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.1" />
+
+            <TextView
+                android:id="@+id/birthTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="18dp"
+                android:gravity="center_vertical"
+                android:text="出生日期"
+                android:textColor="@color/key_text"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.22"
+                app:layout_constraintStart_toEndOf="@+id/sexText"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title" />
+
+            <TextView
+                android:id="@+id/birthText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/tv_bg_greyline"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="2018-08-08"
+                android:textColor="#FFDDDDDD"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toEndOf="@+id/birthTitle"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.1" />
+
+            <TextView
+                android:id="@+id/fatherNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="18dp"
+                android:gravity="center_vertical"
+                android:text="父亲姓名"
+                android:textColor="@color/key_text"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.22"
+                app:layout_constraintStart_toEndOf="@+id/birthText"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title" />
+
+            <TextView
+                android:id="@+id/fatherNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/tv_bg_greyline"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="雷军"
+                android:textColor="#FFDDDDDD"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toEndOf="@+id/fatherNameTitle"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title" />
+
+            <TextView
+                android:id="@+id/matherNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="18dp"
+                android:gravity="center_vertical"
+                android:text="母亲姓名"
+                android:textColor="@color/key_text"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toEndOf="@+id/fatherNameText"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title" />
+
+            <TextView
+                android:id="@+id/matherNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/tv_bg_greyline"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="刘语嫣"
+                android:textColor="#FFDDDDDD"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.3"
+                app:layout_constraintStart_toEndOf="@+id/matherNameTitle"
+                app:layout_constraintTop_toBottomOf="@+id/layout1_title" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/frame_bg_greyline"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.42"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout1">
+
+            <TextView
+                android:id="@+id/vaccineTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:text="接种疫苗"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.10" />
+
+            <TextView
+                android:id="@+id/agentTimeTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="剂次"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/vaccineTitle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.08" />
+
+            <TextView
+                android:id="@+id/batchNumberTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="疫苗批号"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/agentTimeTitle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.09" />
+
+            <TextView
+                android:id="@+id/validTermTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="疫苗有效期"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/batchNumberTitle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.11" />
+
+            <TextView
+                android:id="@+id/priceTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="疫苗价格"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/validTermTitle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.09" />
+
+            <TextView
+                android:id="@+id/vaccinePartTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="接种部位"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/priceTitle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.1" />
+
+            <TextView
+                android:id="@+id/vaccineWayTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="接种途径"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/vaccinePartTitle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.1" />
+
+            <TextView
+                android:id="@+id/chargeSituationTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="收费情况"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/vaccineWayTitle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.1" />
+
+            <TextView
+                android:id="@+id/handleTitle"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="#44cccccc"
+                android:gravity="center"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="操作"
+                android:textColor="@color/key_text"
+                android:textSize="14dp"
+                app:layout_constraintStart_toEndOf="@+id/chargeSituationTitle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.23" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layout_constraintTop_toBottomOf="@+id/handleTitle" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/frame_bg_greyline"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout2">
+
+            <TextView
+                android:id="@+id/autoCallTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="自动顺呼"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.lib.views.SwitchButton
+                android:id="@+id/switchAutoCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:kswThumbColor="@color/green"
+                app:kswTintColor="@color/green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/autoCallTitle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/confirmInoculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/btn_main_rv_selector"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="确认接种"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/callBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/callBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/btn_main_rv_selector"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="呼叫"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/passBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/passBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/btn_main_rv_selector"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="过号"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/callAgainBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/callAgainBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/btn_main_rv_selector"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="重呼"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/loosBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/loosBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/btn_main_rv_selector"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="损耗"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/pauseBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pauseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/btn_main_rv_selector"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="暂停"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/qrCancelBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/qrCancelBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/btn_main_rv_selector"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="扫码消苗"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/backBtn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/btn_main_rv_selector"
+                android:paddingLeft="15dp"
+                android:paddingTop="10dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="返回"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

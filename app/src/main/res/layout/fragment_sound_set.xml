@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootLayout"
+        android:focusable="false">
+
+        <TextView
+            android:id="@+id/pretestCallNum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="预检叫号"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchPretestCallNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/pretestCallNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pretestCallNum" />
+
+        <View
+            android:id="@+id/pretestCallNumLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/pretestCallNum" />
+
+        <TextView
+            android:id="@+id/registerCallNum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="登记叫号"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/pretestCallNumLine" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchRegisterCallNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/registerCallNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/registerCallNum" />
+
+        <View
+            android:id="@+id/registerCallNumLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/registerCallNum" />
+
+        <TextView
+            android:id="@+id/inoculateCallNum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="接种叫号"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/registerCallNumLine" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchInoculateCallNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/inoculateCallNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inoculateCallNum" />
+
+        <View
+            android:id="@+id/inoculateCallNumLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/inoculateCallNum" />
+
+        <TextView
+            android:id="@+id/physicalExamCallNum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="体检叫号"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/inoculateCallNumLine" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchPhysicalExamCallNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/physicalExamCallNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/physicalExamCallNum" />
+
+        <View
+            android:id="@+id/physicalExamCallNumLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/physicalExamCallNum" />
+
+        <TextView
+            android:id="@+id/ENTCallNum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="耳鼻喉叫号"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/physicalExamCallNumLine" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchENTCallNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/ENTCallNum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ENTCallNum" />
+
+        <View
+            android:id="@+id/ENTCallNumLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/ENTCallNum" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

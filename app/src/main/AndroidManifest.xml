@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cybermax.digitaloutpatient">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <application
+        android:name="com.cybermax.digitaloutpatient.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_dangandai"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_dangandai"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.SplashActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/splahTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ServerLoginActivity" android:screenOrientation="landscape" android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.PickWorkstationActivity" android:screenOrientation="landscape" android:launchMode="singleTop"/>
+        <activity android:name=".activity.DoctorLoginActivity" android:screenOrientation="landscape" android:launchMode="singleTop" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.workstation.GetNumberPaperActivity" android:screenOrientation="landscape" android:launchMode="singleTop"/>
+        <activity android:name=".activity.workstation.RegisterDeskActivity" android:screenOrientation="landscape" android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity android:name=".activity.workstation.PretestDeskActivity" android:screenOrientation="landscape" android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity android:name=".activity.workstation.InoculateWorkstationActivity" android:screenOrientation="landscape"
+            android:launchMode="singleTop" android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity android:name=".activity.SearchUserActivity" android:screenOrientation="landscape"
+            android:launchMode="singleTop" android:windowSoftInputMode="stateHidden|adjustNothing"/>
+        <activity android:name=".activity.workstation.StayObserveActivity" android:screenOrientation="landscape" android:launchMode="singleTop"/>
+        <activity android:name=".activity.workstation.PhysicalExamDeskActivity" android:screenOrientation="landscape" android:launchMode="singleTop" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.screen.StayObserveWaitScreenActivity" android:screenOrientation="landscape" android:launchMode="singleTop"/>
+        <activity android:name=".activity.screen.BigWaitScreenActivity" android:screenOrientation="landscape" android:launchMode="singleTop"/>
+        <activity android:name=".activity.screen.LittleWaitScreenActivity" android:screenOrientation="landscape" android:launchMode="singleTop"/>
+        <activity android:name=".activity.workstation.ChargeDeskActivity" android:screenOrientation="landscape" android:launchMode="singleTop" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".activity.BarcodeScanActivity" android:screenOrientation="landscape"/>
+        <activity android:name=".dialog.ScreenSetActivityDialog" android:screenOrientation="landscape"/>
+
+        <service android:name="com.cybermax.digitaloutpatient.netty.service.NetService" />
+        <receiver
+            android:name=".receiver.BootStartBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

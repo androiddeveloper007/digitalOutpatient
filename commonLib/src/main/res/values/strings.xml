@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="wifiOn">wifi on</string>
+    <string name="wifiOff">wifi off</string>
+    <string name="app_name">数字化门诊</string>
+    <string name="notice_dialog_loading">loading...</string>
+
+</resources>

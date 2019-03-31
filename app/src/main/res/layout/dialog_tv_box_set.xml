@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp"
+        android:background="@drawable/dialog_tv_box_set_bg">
+
+        <TextView
+            android:id="@+id/serverIpTitle"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="服务器IP："
+            android:textColor="@color/textcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/serverIpText"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:textColor="@color/textcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <View
+            android:id="@+id/pretestScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/serverIpTitle" />
+
+        <TextView
+            android:id="@+id/portTitleSet"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/switch_set_item_pressed"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="端口："
+            android:textColor="@color/textcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pretestScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/portText"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:textColor="@color/textcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pretestScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <View
+            android:id="@+id/registerScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/portTitleSet" />
+
+        <TextView
+            android:id="@+id/inoculateScreenSet"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@drawable/switch_set_item_pressed"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="连接状态："
+            android:textColor="@color/textcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/connectStateText"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:textColor="@color/textcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <View
+            android:id="@+id/inoculateScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/inoculateScreenSet" />
+
+        <TextView
+            android:id="@+id/confirmClean"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_clean_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="清除服务器数据"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inoculateScreenSetLine"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".3"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="退出登录"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5"
+            android:background="@drawable/btn_logout_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmClean"/>
+
+        <TextView
+            android:id="@+id/tvTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:focusable="false"
+            android:text="清除服务器数据后回到登录页面"
+            android:textColor="@color/text_color_7"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logout" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

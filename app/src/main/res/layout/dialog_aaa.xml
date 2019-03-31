@@ -1,0 +1,19 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/root"
+    android:background="@drawable/btn_main_bottom_selector1">
+
+    <TextView
+        android:id="@+id/card_title_tv"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="123"
+        android:textSize="18sp"/>
+
+</android.support.constraint.ConstraintLayout>

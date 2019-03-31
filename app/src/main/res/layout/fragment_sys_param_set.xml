@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootLayout">
+
+        <TextView
+            android:id="@+id/serverIpTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="服务器IP："
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.35"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.15"/>
+
+        <TextView
+            android:id="@+id/serverIpText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.15"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <View
+            android:id="@+id/pretestScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/serverIpTitle" />
+
+        <TextView
+            android:id="@+id/portTitleSet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.15"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="端口："
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pretestScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <TextView
+            android:id="@+id/portText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.15"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pretestScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <View
+            android:id="@+id/registerScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/portTitleSet" />
+
+        <TextView
+            android:id="@+id/inoculateScreenSet"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.15"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="连接状态："
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <TextView
+            android:id="@+id/connectStateText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.15"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <View
+            android:id="@+id/inoculateScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/inoculateScreenSet" />
+
+        <TextView
+            android:id="@+id/confirmClean"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/btn_clear_server_selector"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:text="清除服务器数据"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:focusable="true"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inoculateScreenSetLine"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="清除服务器数据后回到登录页面"
+            android:textColor="@color/text_color_7"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmClean" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

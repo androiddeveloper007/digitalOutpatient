@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#2b6de7"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".25" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#2b6de7"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".11"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".5" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#2b6de7"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="20dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".11"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".25" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center"
+            android:text="排队号"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".08"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".25" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center"
+            android:text="姓名"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".08"
+            app:layout_constraintStart_toEndOf="@+id/tv4"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".375" />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center"
+            android:text="提示信息"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".08"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".375" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.54"
+            app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#2b6de7"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="等待："
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".25" />
+
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#2b6de7"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".09"
+            app:layout_constraintTop_toBottomOf="@+id/rv"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".75" />
+
+        <TextView
+            android:id="@+id/tv9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="过号："
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv7"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".25" />
+
+        <TextView
+            android:id="@+id/tv10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#5488eb"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".09"
+            app:layout_constraintTop_toBottomOf="@+id/tv7"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".75" />
+
+        <TextView
+            android:id="@+id/tv11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#2b6de7"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="温馨提示："
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv9"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".25" />
+
+        <TextView
+            android:id="@+id/tv12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#2b6de7"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent=".09"
+            app:layout_constraintTop_toBottomOf="@+id/tv9"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".75" />
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.89"/>
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".625"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.62"
+            app:layout_constraintBottom_toBottomOf="@+id/rv"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".11"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".19"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".73"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".82"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias=".91"/>
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

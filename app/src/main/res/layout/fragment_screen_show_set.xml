@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootLayout">
+
+        <TextView
+            android:id="@+id/pretestScreenSet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="预检"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchPretestScreenSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/pretestScreenSet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pretestScreenSet" />
+
+        <View
+            android:id="@+id/pretestScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/pretestScreenSet" />
+
+        <TextView
+            android:id="@+id/registerScreenSet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="登记"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/pretestScreenSetLine" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchRegisterScreenSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/registerScreenSet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/registerScreenSet" />
+
+        <View
+            android:id="@+id/registerScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/registerScreenSet" />
+
+        <TextView
+            android:id="@+id/inoculateScreenSet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="接种"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/registerScreenSetLine" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchInoculateScreenSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/inoculateScreenSet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/inoculateScreenSet" />
+
+        <View
+            android:id="@+id/inoculateScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/inoculateScreenSet" />
+
+        <TextView
+            android:id="@+id/physicalExamScreenSet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="体检"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/inoculateScreenSetLine" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchPhysicalExamScreenSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/physicalExamScreenSet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/physicalExamScreenSet" />
+
+        <View
+            android:id="@+id/physicalExamScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/physicalExamScreenSet" />
+
+        <TextView
+            android:id="@+id/ENTScreenSet"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.11"
+            android:background="@drawable/switch_set_item_pressed"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:text="耳鼻喉"
+            android:textColor="@color/text_color_7"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/physicalExamScreenSetLine" />
+
+        <com.lib.views.SwitchButton
+            android:id="@+id/switchENTScreenSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            app:kswThumbColor="@color/green"
+            app:kswTintColor="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/ENTScreenSet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ENTScreenSet" />
+
+        <View
+            android:id="@+id/ENTScreenSetLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/ENTScreenSet" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

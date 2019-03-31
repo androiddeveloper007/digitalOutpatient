@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/rv_root"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/drawer_rv_item_selector1">
+
+        <TextView
+            android:id="@+id/vaccineTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintHorizontal_weight="1"
+            android:gravity="center"
+            android:textColor="@color/text_color_7"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/agentTimeTitle"/>
+
+        <TextView
+            android:id="@+id/agentTimeTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintHorizontal_weight="1"
+            android:gravity="center"
+            android:textColor="@color/text_color_7"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintStart_toEndOf="@+id/vaccineTitle"
+            app:layout_constraintEnd_toStartOf="@+id/validTermTitle" />
+
+        <TextView
+            android:id="@+id/validTermTitle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintHorizontal_weight="1"
+            android:gravity="center"
+            android:textColor="@color/text_color_7"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintStart_toEndOf="@+id/agentTimeTitle"
+            app:layout_constraintEnd_toStartOf="@+id/callNumLayout"/>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/callNumLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/validTermTitle"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/callNumBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:background="@drawable/btn_main_bottom_selector1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintHeight_default="percent"
+                app:layout_constraintHeight_percent="0.75"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:text="叫号"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="#ecf0f6"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#469ec2"
+            android:paddingStart="24dp"
+            android:text="批号"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:gravity="center_vertical"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"/>
+
+        <TextView
+            android:id="@+id/vaccineTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f2f4f3"
+            android:text="疫苗"
+            android:textColor="@color/textcolor_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:gravity="center"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/factoryTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f2f4f3"
+            android:gravity="center"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="生产企业"
+            android:textColor="@color/textcolor_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/vaccineTitle"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/batchTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f2f4f3"
+            android:gravity="center"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="批号"
+            android:textColor="@color/textcolor_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/factoryTitle"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.25" />
+
+        <TextView
+            android:id="@+id/validTermTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f2f4f3"
+            android:gravity="center"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="有效期"
+            android:textColor="@color/textcolor_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/batchTitle"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.15" />
+
+        <TextView
+            android:id="@+id/stockTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f2f4f3"
+            android:gravity="center"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="库存"
+            android:textColor="@color/textcolor_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/validTermTitle"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.1" />
+
+        <TextView
+            android:id="@+id/priceTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#f2f4f3"
+            android:gravity="center"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.08"
+            android:text="价格"
+            android:textColor="@color/textcolor_black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/stockTitle"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.1" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintTop_toBottomOf="@+id/priceTitle" />
+
+        <View
+            android:layout_width="0.33dp"
+            android:layout_height="0dp"
+            android:background="@color/home_round_progress_bar_default_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.68"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vaccineTitle" />
+
+        <View
+            android:layout_width="0.33dp"
+            android:layout_height="0dp"
+            android:background="@color/home_round_progress_bar_default_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.68"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vaccineTitle" />
+
+        <View
+            android:layout_width="0.33dp"
+            android:layout_height="0dp"
+            android:background="@color/home_round_progress_bar_default_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.68"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vaccineTitle" />
+
+        <View
+            android:layout_width="0.33dp"
+            android:layout_height="0dp"
+            android:background="@color/home_round_progress_bar_default_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.68"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vaccineTitle" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0.33dp"
+            android:layout_height="0dp"
+            android:background="@color/home_round_progress_bar_default_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.68"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/vaccineTitle" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:background="@color/home_round_progress_bar_default_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/line" />
+
+        <TextView
+            android:id="@+id/callBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_main_bottom_selector1"
+            android:gravity="center"
+            android:text="确  认"
+            android:textColor="#ffffff"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_default="percent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.3" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/closedia"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
